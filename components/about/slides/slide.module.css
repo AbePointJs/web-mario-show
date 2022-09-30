@@ -1,0 +1,25 @@
+/* autoprefixer grid: autoplace */
+.dontAnimate * {
+	animation-play-state: paused;
+}
+.about,
+.concerts {
+	grid-row: 1/4;
+	grid-column: 2/4;
+	justify-self: center;
+	align-self: center;
+}
+.work {
+	grid-row: 2/4;
+	grid-column: 1/3;
+	justify-self: center;
+	align-self: start;
+}
+
+@media (max-width: 600px) {
+	.about,
+	.concerts,
+	.work {
+		order: 1;
+	}
+}

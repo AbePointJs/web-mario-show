@@ -1,0 +1,84 @@
+.collabContainer {
+	background-image: url(../../assets/about/papel.jpg);
+	padding: 2rem 3rem;
+	border-radius: 30px;
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	width: 35rem;
+	height: fit-content;
+	display: flex;
+	flex-flow: column;
+	animation-name: show;
+	animation-duration: 100ms;
+	animation-iteration-count: 1;
+}
+.image {
+	position: absolute;
+	width: 22.3rem;
+	height: 24.8rem;
+	top: -5%;
+	right: -50%;
+}
+@media (max-width: 600px) {
+	.image {
+		width: 10rem;
+		height: 10rem;
+		right: -30%;
+		top: -10%;
+	}
+	.collabContainer {
+		width: 90vw;
+		height: fit-content;
+	}
+}
+.animated {
+	z-index: 100;
+	animation-name: appear;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+@keyframes appear {
+	from {
+		transform: scale(0%);
+	}
+	50% {
+		transform: scale(150%);
+	}
+	to {
+		transform: scale(0%);
+	}
+}
+.marioFace {
+	width: 500px;
+	height: 500px;
+	z-index: 1000;
+	position: absolute;
+	top: 0%;
+	bottom: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url("../../assets/collab/CaraMarioRecortada.png");
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation-name: face;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes face {
+	from {
+		transform: scale(0%) rotate(0deg);
+	}
+	33% {
+		transform: scale(150%) rotate(360deg);
+	}
+	66% {
+		transform: scale(170%) rotate(700deg);
+	}
+	to {
+		transform: scale(0%) rotate(750deg);
+	}
+}

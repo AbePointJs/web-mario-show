@@ -1,0 +1,37 @@
+.active {
+	transition: all ease-in-out 500ms;
+	-webkit-transition: all ease-in-out 500ms;
+	transform: scale(120%);
+	position: relative;
+	z-index: 1;
+}
+.active::after {
+	content: " ";
+	display: inline;
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	box-shadow: 5px 5px 30px #666666;
+	border-radius: 100%;
+	width: 90%;
+	height: 90%;
+	background-image: url("../../assets/listen/vinyl.svg");
+	background-size: cover;
+	z-index: -2;
+	animation: rotate 2s 300ms linear infinite, toPlace 300ms linear 1;
+	overflow: hidden;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes toPlace {
+	from {
+		transform: translateX(-30%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

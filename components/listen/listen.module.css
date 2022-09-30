@@ -1,0 +1,12 @@
+.listen {
+	padding-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	justify-content: center;
+	align-items: center;
+	gap: 7rem;
+	overflow: hidden;
+	z-index: 10;
+	position: relative;
+	padding: 2rem;
+}
